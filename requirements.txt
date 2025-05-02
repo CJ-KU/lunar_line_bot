@@ -1,0 +1,4 @@
+flask
+requests
+lunarcalendar
+python-dotenv
