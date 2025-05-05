@@ -15,7 +15,8 @@ GROUP_ID = os.getenv("GROUP_ID")
 def is_two_days_before_lunar_1_or_15():
     target_date = datetime.date.today() + datetime.timedelta(days=2)
     solar = Solar(target_date.year, target_date.month, target_date.day)
-    lunar = Converter.Solar2Lunar(solar)
+    converter = Converter()
+    lunar = converter.Solar2Lunar(solar)
     return lunar.day == 1 or lunar.day == 15
 
 def send_message(msg):
