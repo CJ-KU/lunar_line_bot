@@ -38,7 +38,7 @@ def index():
 @app.route("/run", methods=["GET"])
 def run():
     if is_two_days_before_lunar_1_or_15():
-        send_message("提醒：後天是農曆初一或十五，記得拜拜！")
+        send_message("提醒：後天是農曆初一或十五，記得買水果！🍇🍈🍉🍊🍌🍅🍓🍒🍑🍐🍏🍎🥭🥝🥑")
     return "Checked."
 
 if __name__ == "__main__":
