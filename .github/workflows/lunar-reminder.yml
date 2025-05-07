@@ -1,0 +1,13 @@
+name: 每日農曆提醒推播
+
+on:
+  schedule:
+    - cron: '22 21 * * *'  # 台灣時間 06:00（UTC = -8）
+  workflow_dispatch:
+
+jobs:
+  trigger-lunarbot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 呼叫農曆提醒 /run
+        run: curl -X GET https://lunar-line-bot.onrender.com/run
